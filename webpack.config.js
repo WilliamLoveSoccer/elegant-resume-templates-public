@@ -44,7 +44,7 @@ module.exports = {
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
-        static: path.resolve(__dirname, './dist'),
+        static: path.resolve(__dirname, './public'),
         hot: true,
     },
 };
