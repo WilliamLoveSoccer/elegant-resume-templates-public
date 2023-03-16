@@ -1,6 +1,6 @@
 # ElegantResume Resume Templates
 
-## Website: [www.elegantresume.pro](www.elegantresume.pro)
+## Website: [www.elegantresume.pro](https://www.elegantresume.pro)
 
 ### Description
 
