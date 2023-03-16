@@ -23,7 +23,7 @@ This project is designed in a way that it can be packed as a NPM package and is 
 
 ### How to work on this project?
 
-1. Create a new branch from dev branch, do your work, then create a pull request.
+1. Create a new branch from dev branch, do your work, then create a pull request. The branching stategy can be found [here](https://cloudbuilder.in/blogs/2018/12/02/git-branching-insights/)
 2. I (the owner) will review the code and approve or reject the pull request.
 
 ### To Do
