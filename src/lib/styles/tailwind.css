@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#page .er-text-xs {
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-line-height);
+}
+#page .er-text-sm {
+    font-size: var(--text-sm-size);
+    line-height: var(--text-sm-line-height);
+}
+#page .er-text-base {
+    font-size: var(--text-base-size);
+    line-height: var(--text-base-line-height);
+}
+#page .er-text-lg {
+    font-size: var(--text-lg-size);
+    line-height: var(--text-lg-line-height);
+}
+#page .er-text-xl {
+    font-size: var(--text-xl-size);
+    line-height: var(--text-xl-line-height);
+}
+#page .er-text-2xl {
+    font-size: var(--text-2xl-size);
+    line-height: var(--text-2xl-line-height);
+}
+#page .er-text-3xl {
+    font-size: var(--text-3xl-size);
+    line-height: var(--text-3xl-line-height);
+}
+#page .er-text-4xl {
+    font-size: var(--text-4xl-size);
+    line-height: var(--text-4xl-line-height);
+}

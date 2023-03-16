@@ -1,0 +1,17 @@
+{
+    "template": {
+        "loading": "正在加载，请稍等",
+        "overflowWarning": "以下内容都在第二页"
+    },
+    "photo": {
+        "tooltips": {
+            "uploadPhotograph": "上传照片",
+            "photoRequirement": "最大: 300kb. 支持 jpeg, jpg, png 文件",
+            "fileTooBig": "你的照片太大啦，照片最大为 ",
+            "wrongFileType": "照片格式不对。仅支持PNG, JPG and JPEG"
+        }
+    },
+    "datePicker": {
+        "present": "至今"
+    }
+}

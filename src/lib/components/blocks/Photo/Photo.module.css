@@ -1,0 +1,6 @@
+.photo {
+    @apply er-cursor-pointer;
+    @apply er-border-2 er-border-black er-border-dashed;
+    @apply er-text-sm er-text-center;
+    @apply er-flex er-items-center er-justify-center;
+}

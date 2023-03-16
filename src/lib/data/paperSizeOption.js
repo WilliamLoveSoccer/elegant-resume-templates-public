@@ -1,0 +1,26 @@
+export default [
+    {
+        name: 'US Letter',
+        // width: 215.9,
+        // length: 279.4,
+        width: '816px',
+        length: '1056px',
+        widthInPx: 816,
+        lengthInPx: 1056,
+        widthInMM: 215.9,
+        lengthInMM: 279.4,
+        widthInInch: '8.5in',
+        lengthInInch: '11in',
+    },
+    {
+        name: 'A4',
+        width: '793px',
+        length: '1122px',
+        widthInPx: 793,
+        lengthInPx: 1122,
+        widthInMM: 210,
+        lengthInMM: 297,
+        widthInInch: '8.25in',
+        lengthInInch: '11.75in',
+    },
+];

@@ -1,0 +1,11 @@
+.tooltip {
+    left: 10px;
+    top: -80px;
+    width: 130px;
+    z-index: 100;
+    @apply er-absolute er-bg-gray-100 er-border er-border-gray-300 er-rounded er-p-3;
+}
+
+.dashline {
+    @apply er-border-dashed er-border-t er-border-gray-400 er-w-full er-absolute;
+}

@@ -1,0 +1,9 @@
+.container {
+    width: 793px;
+    min-height: 1080px;
+    @apply er-h-full er-text-3xl er-flex er-justify-center er-items-center;
+}
+
+.templateBorder {
+    @apply er-border er-border-gray-400 er-rounded;
+}

@@ -1,0 +1,18 @@
+{
+    "template": {
+        "loading": "Loading...Please wait.",
+        "overflowWarning": "The contents below are in the second page."
+    },
+    "photo": {
+        "tooltips": {
+            "uploadPhotograph": "Upload Photo",
+            "photoRequirement": "Maximum: 300kb. Support jpeg, jpg, png",
+            "backToDashboard": "Go Back to Dashboard",
+            "fileTooBig": "Your photo size is too big. The maximum filesize is ",
+            "wrongFileType": "Photo only allows file types of PNG, JPG and JPEG"
+        }
+    },
+    "datePicker": {
+        "present": "Present"
+    }
+}
