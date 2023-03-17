@@ -24,7 +24,7 @@ const ExperienceItemA = ({ id, item }) => {
                 <div className="er-clear-both"></div>
             </div>
             <div>
-                <p className="er-float-left er-text-sm er-italic">
+                <p className="er-float-left er-text-sm">
                     <ContentEditableEle
                         html={item.employer}
                         actionCreator={(newEmployer) => ({ entity: 'exp', action: 'updateExpEmployer', payload: { id, newEmployer } })}

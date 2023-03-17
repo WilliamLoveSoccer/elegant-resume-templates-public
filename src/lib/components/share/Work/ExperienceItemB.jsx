@@ -13,7 +13,7 @@ const ExperienceItemB = ({ id, item }) => {
                         actionCreator={(newJobTitle) => ({ entity: 'exp', action: 'updateExpJobTitle', payload: { id, newJobTitle } })}
                     />
                 </p>
-                <p className="er-text-sm er-italic">
+                <p className="er-text-sm">
                     <ContentEditableEle
                         html={item.employer}
                         actionCreator={(newEmployer) => ({ entity: 'exp', action: 'updateExpEmployer', payload: { id, newEmployer } })}

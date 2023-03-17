@@ -17,7 +17,7 @@ const ProjectItemB = ({ id, item }) => {
                     />
                 </p>
                 {visibility.subtitle && (
-                    <p className="er-text-sm er-italic">
+                    <p className="er-text-sm">
                         <ContentEditableEle
                             html={item.subtitle}
                             actionCreator={(newTitle) => ({ entity: 'project', action: 'updateProjSubtitle', payload: { id, newTitle } })}

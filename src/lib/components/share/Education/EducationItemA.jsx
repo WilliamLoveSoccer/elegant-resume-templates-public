@@ -26,7 +26,7 @@ const EducationItemA = ({ id, item }) => {
                 <div className="er-clear-both"></div>
             </div>
             <div>
-                <p className="er-float-left er-text-sm er-italic">
+                <p className="er-float-left er-text-sm">
                     <ContentEditableEle
                         html={item.institution}
                         actionCreator={(newInstitution) => ({ entity: 'edu', action: 'updateEduInstitution', payload: { id, newInstitution } })}

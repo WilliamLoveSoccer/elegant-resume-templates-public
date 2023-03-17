@@ -20,16 +20,13 @@ const Artboard = ({ resumeData, onUpdate, config = {}, children = <div></div> })
             fontSize = 12;
         }
         for (const [key, sizeDefault] of Object.entries(fontSizeOptions)) {
-            // document.documentElement.style.setProperty(key, `${Math.floor(scaler(fontSize) * sizeDefault * 12)}px`);
             artiboard.current.style.setProperty(key, `${Math.floor(scaler(fontSize) * sizeDefault * 12)}px`);
         }
     }, [fontSize]);
 
-    // console.log(resumeData, 'resume data in lib test');
-
     return (
         <div ref={artiboard}>
-            <div id="er-internal-toolbar" style={{ height: 50 }}></div>
+            <div id="er-internal-toolbar"></div>
             <ResumeProvider resumeData={resumeData} onUpdate={onUpdate} config={config}>
                 {children}
             </ResumeProvider>

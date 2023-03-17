@@ -13,7 +13,7 @@ const EducationItemA = ({ id, item }) => {
                         actionCreator={(newDegree) => ({ entity: 'edu', action: 'updateEduDegree', payload: { id, newDegree } })}
                     />
                 </p>
-                <p className="er-text-sm er-italic">
+                <p className="er-text-sm">
                     <ContentEditableEle
                         html={item.institution}
                         actionCreator={(newInstitution) => ({ entity: 'edu', action: 'updateEduInstitution', payload: { id, newInstitution } })}
