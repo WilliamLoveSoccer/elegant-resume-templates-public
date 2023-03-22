@@ -213,14 +213,14 @@ div[contenteditable='true']:empty:before {
 }
 
 .editor-list-ul li::before{
-    content: "\2022\20";
+    content: "\2022\20\20";
     font-family: Tahoma, Verdana, Segoe, sans-serif;
-    margin-left: -12px;
+    margin-left: -16px;
 }
 
 
 .editor-listitem {
-    margin-left: 17px;
+    margin-left: 16px;
 }
 
 .editor-nested-listitem {
