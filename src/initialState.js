@@ -126,7 +126,7 @@ const initState = {
         items: [
             {
                 id: 'c768dcca-90f5-4242-a608-6759b4f667fa',
-                fieldsVisibility: '{"subtitle":false,"date":true,"location":true}',
+                fieldsVisibility: '{"subtitle":true,"date":true,"location":true}',
                 title: 'Project Title',
                 subtitle: 'Enter your project one-line summary here.',
                 startDate: '2021.01',
