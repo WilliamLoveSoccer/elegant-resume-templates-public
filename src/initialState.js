@@ -92,7 +92,7 @@ const initState = {
     metadata: {
         language: '',
         templateLanguage: 'en',
-        font: 'Noto Serif SC',
+        font: 'Lato',
         fontSize: 13,
         fitToOnePage: true,
         fitToOnePageMargin: {
@@ -146,7 +146,7 @@ const initState = {
             {
                 id: '1',
                 title: 'Title',
-                fieldsVisibility: '{"subtitle":false,"date":false,"location":false}',
+                fieldsVisibility: '{"subtitle":true,"date":true,"location":true}',
                 subtitle: 'Enter your project one-line summary here.',
                 date: 'Start Date - End Date',
                 startDate: 'Start Date',

@@ -11,9 +11,9 @@ const HeadingB = ({ content, actionCreator }) => {
     let style = h_position + ' ' + b_border + ' ' + t_border + ' ';
 
     return (
-        <h2 className={style + ' er-text-lg er-py-1 er-font-bold er-col-span-1'} style={{ borderColor: colors.primary }}>
+        <div className={style + ' er-text-lg er-py-1 er-font-bold er-col-span-1'} style={{ borderColor: colors.primary }}>
             <ContentEditableEle html={content} style={{ color: colors.primary }} actionCreator={actionCreator} />
-        </h2>
+        </div>
     );
 };
 

@@ -212,19 +212,24 @@ div[contenteditable='true']:empty:before {
     @apply er-list-none;
 }
 
-.editor-list-ul li::before{
-    content: "\2022\20\20";
+.editor-list-ul li::before {
+    content: '\2022';
+    /* font-size: 15px; */
     font-family: Tahoma, Verdana, Segoe, sans-serif;
-    margin-left: -16px;
+    padding-right: calc(var(--text-sm-size) * 0.55);
+    margin-left: calc(0px - var(--text-sm-size));
 }
 
-
 .editor-listitem {
-    margin-left: 18px;
+    margin-left: var(--text-sm-size);
 }
 
 .editor-nested-listitem {
     list-style-type: none;
+}
+
+#page .er-text-right .editor-paragraph {
+    text-align: right;
 }
 
 pre::-webkit-scrollbar {

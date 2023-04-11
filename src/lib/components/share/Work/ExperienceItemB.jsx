@@ -7,24 +7,24 @@ const ExperienceItemB = ({ id, item }) => {
     return (
         <div className="er-pb-2" key={id}>
             <div className="er-flex er-justify-between">
-                <p className="er-text-sm er-font-bold">
+                <div className="er-text-sm er-font-bold">
                     <ContentEditableEle
                         html={item.jobTitle}
                         actionCreator={(newJobTitle) => ({ entity: 'exp', action: 'updateExpJobTitle', payload: { id, newJobTitle } })}
                     />
-                </p>
-                <p className="er-text-sm">
+                </div>
+                <div className="er-text-sm">
                     <ContentEditableEle
                         html={item.employer}
                         actionCreator={(newEmployer) => ({ entity: 'exp', action: 'updateExpEmployer', payload: { id, newEmployer } })}
                     />
-                </p>
-                <p className="er-text-sm">
+                </div>
+                <div className="er-text-sm">
                     <ContentEditableEle
                         html={item.location}
                         actionCreator={(newLocation) => ({ entity: 'exp', action: 'updateExpLocation', payload: { id, newLocation } })}
                     />
-                </p>
+                </div>
                 <div className="er-text-sm">
                     <Date
                         startDate={item.startDate}

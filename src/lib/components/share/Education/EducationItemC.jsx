@@ -7,25 +7,25 @@ const EducationItemA = ({ id, item }) => {
     return (
         <div className="er-pb-2" key={id}>
             <div className={'er-flex' + ' er-justify-between'}>
-                <p className="er-text-sm er-font-bold">
+                <div className="er-text-sm er-font-bold">
                     <ContentEditableEle
                         html={item.degree}
                         actionCreator={(newDegree) => ({ entity: 'edu', action: 'updateEduDegree', payload: { id, newDegree } })}
                     />
-                </p>
-                <p className="er-text-sm">
+                </div>
+                <div className="er-text-sm">
                     <ContentEditableEle
                         html={item.institution}
                         actionCreator={(newInstitution) => ({ entity: 'edu', action: 'updateEduInstitution', payload: { id, newInstitution } })}
                     />
-                </p>
+                </div>
 
-                <p className="er-text-sm">
+                <div className="er-text-sm">
                     <ContentEditableEle
                         html={item.location}
                         actionCreator={(newLocation) => ({ entity: 'edu', action: 'updateEduLocation', payload: { id, newLocation } })}
                     />
-                </p>
+                </div>
                 <div className="er-text-sm">
                     <Date
                         startDate={item.startDate}

@@ -9,16 +9,26 @@ const ProjectItemA = ({ id, item }) => {
 
     return (
         <div className="er-pb-2">
-            <div className="">
+            <div className="er-flex er-justify-between">
                 <div>
-                    <p className="er-float-left er-text-sm er-font-bold">
+                    <div className="er-text-sm er-font-bold">
                         <ContentEditableEle
                             html={item.title}
                             actionCreator={(newTitle) => ({ entity: 'project', action: 'updateProjTitle', payload: { id, newTitle } })}
                         />
-                    </p>
+                    </div>
+                    {visibility.subtitle && (
+                        <div className="er-text-sm">
+                            <ContentEditableEle
+                                html={item.subtitle}
+                                actionCreator={(newTitle) => ({ entity: 'project', action: 'updateProjSubtitle', payload: { id, newTitle } })}
+                            />
+                        </div>
+                    )}
+                </div>
+                <div className="er-flex er-flex-col er-items-end">
                     {visibility.date && (
-                        <div className="er-float-right er-text-sm er-text-right">
+                        <div className="er-text-sm er-text-right">
                             <Date
                                 startDate={item.startDate}
                                 endDate={item.endDate}
@@ -28,19 +38,8 @@ const ProjectItemA = ({ id, item }) => {
                             />
                         </div>
                     )}
-                    <div className="er-clear-both"></div>
-                </div>
-                <div>
-                    {visibility.subtitle && (
-                        <p className="er-float-left er-text-sm">
-                            <ContentEditableEle
-                                html={item.subtitle}
-                                actionCreator={(newTitle) => ({ entity: 'project', action: 'updateProjSubtitle', payload: { id, newTitle } })}
-                            />
-                        </p>
-                    )}
                     {visibility.location && (
-                        <p className="er-float-right er-text-sm">
+                        <div className="er-text-right er-text-sm">
                             <ContentEditableEle
                                 html={item.location}
                                 actionCreator={(newLocation) => ({
@@ -49,9 +48,8 @@ const ProjectItemA = ({ id, item }) => {
                                     payload: { id, newLocation },
                                 })}
                             />
-                        </p>
+                        </div>
                     )}
-                    <div className="er-clear-both"></div>
                 </div>
             </div>
             <div>

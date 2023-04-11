@@ -10,7 +10,7 @@ const HeadingC = ({ content, actionCreator }) => {
 
     return (
         <div className="er-grid er-grid-cols-5 er-gap-4 er-align-center er-mb-2" style={{ backgroundColor: '#e3e3e3' }}>
-            <h2
+            <div
                 className={style + ' er-text-lg er-py-1 er-font-bold er-text-center er-col-span-1'}
                 style={{
                     color: '#ffffff',
@@ -18,7 +18,7 @@ const HeadingC = ({ content, actionCreator }) => {
                 }}
             >
                 <ContentEditableEle html={content} actionCreator={actionCreator} />
-            </h2>
+            </div>
         </div>
     );
 };

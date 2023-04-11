@@ -11,7 +11,7 @@ const AcademicExpItemA = ({ id, item }) => {
         <div className="er-pb-2">
             <div className="er-flex er-justify-between">
                 <div>
-                    <p className="er-text-sm er-font-bold">
+                    <div className="er-text-sm er-font-bold">
                         <ContentEditableEle
                             html={item.title}
                             actionCreator={(newTitle) => ({
@@ -20,9 +20,9 @@ const AcademicExpItemA = ({ id, item }) => {
                                 payload: { id, newTitle },
                             })}
                         />
-                    </p>
+                    </div>
                     {visibility.subtitle && (
-                        <p className="er-text-sm">
+                        <div className="er-text-sm">
                             <ContentEditableEle
                                 html={item.subtitle}
                                 actionCreator={(newTitle) => ({
@@ -31,10 +31,10 @@ const AcademicExpItemA = ({ id, item }) => {
                                     payload: { id, newTitle },
                                 })}
                             />
-                        </p>
+                        </div>
                     )}
                 </div>
-                <div>
+                <div className='er-flex er-flex-col er-items-end'>
                     {visibility.date && (
                         <div>
                             <div className="er-text-right er-text-sm">
@@ -57,7 +57,7 @@ const AcademicExpItemA = ({ id, item }) => {
                     )}
                     {visibility.location && (
                         <div>
-                            <p className="er-text-sm er-text-right">
+                            <div className="er-text-sm er-text-right">
                                 <ContentEditableEle
                                     html={item.location}
                                     actionCreator={(newLocation) => ({
@@ -66,7 +66,7 @@ const AcademicExpItemA = ({ id, item }) => {
                                         payload: { id, newLocation },
                                     })}
                                 />
-                            </p>
+                            </div>
                         </div>
                     )}
                 </div>

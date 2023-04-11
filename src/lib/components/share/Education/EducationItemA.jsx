@@ -7,12 +7,12 @@ const EducationItemA = ({ id, item }) => {
     return (
         <div className="er-pb-2" key={id}>
             <div>
-                <p className="er-float-left er-text-sm er-font-bold">
+                <div className="er-float-left er-text-sm er-font-bold">
                     <ContentEditableEle
                         html={item.degree}
                         actionCreator={(newDegree) => ({ entity: 'edu', action: 'updateEduDegree', payload: { id, newDegree } })}
                     />
-                </p>
+                </div>
                 <div className="er-float-right er-text-sm">
                     <Date
                         startDate={item.startDate}
@@ -26,18 +26,18 @@ const EducationItemA = ({ id, item }) => {
                 <div className="er-clear-both"></div>
             </div>
             <div>
-                <p className="er-float-left er-text-sm">
+                <div className="er-float-left er-text-sm">
                     <ContentEditableEle
                         html={item.institution}
                         actionCreator={(newInstitution) => ({ entity: 'edu', action: 'updateEduInstitution', payload: { id, newInstitution } })}
                     />
-                </p>
-                <p className="er-float-right er-text-sm">
+                </div>
+                <div className="er-float-right er-text-sm">
                     <ContentEditableEle
                         html={item.location}
                         actionCreator={(newLocation) => ({ entity: 'edu', action: 'updateEduLocation', payload: { id, newLocation } })}
                     />
-                </p>
+                </div>
                 <div className="er-clear-both"></div>
             </div>
             {item.summaryVisibility && (

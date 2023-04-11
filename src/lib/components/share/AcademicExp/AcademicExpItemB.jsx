@@ -10,7 +10,7 @@ const AcademicExpItemB = ({ id, item }) => {
     return (
         <div className="er-pb-2">
             <div className={(visibility.subtitle || visibility.date || visibility.location) && 'er-flex' + ' er-justify-between'}>
-                <p className="er-text-sm er-font-bold">
+                <div className="er-text-sm er-font-bold">
                     <ContentEditableEle
                         html={item.title}
                         actionCreator={(newTitle) => ({
@@ -19,9 +19,9 @@ const AcademicExpItemB = ({ id, item }) => {
                             payload: { id, newTitle },
                         })}
                     />
-                </p>
+                </div>
                 {visibility.subtitle && (
-                    <p className="er-text-sm">
+                    <div className="er-text-sm">
                         <ContentEditableEle
                             html={item.subtitle}
                             actionCreator={(newTitle) => ({
@@ -30,11 +30,11 @@ const AcademicExpItemB = ({ id, item }) => {
                                 payload: { id, newTitle },
                             })}
                         />
-                    </p>
+                    </div>
                 )}
                 {visibility.location && (
                     <div>
-                        <p className="er-text-sm er-text-right">
+                        <div className="er-text-sm er-text-right">
                             <ContentEditableEle
                                 html={item.location}
                                 actionCreator={(newLocation) => ({
@@ -43,7 +43,7 @@ const AcademicExpItemB = ({ id, item }) => {
                                     payload: { id, newLocation },
                                 })}
                             />
-                        </p>
+                        </div>
                     </div>
                 )}
                 {visibility.date && (
