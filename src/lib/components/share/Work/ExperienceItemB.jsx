@@ -29,6 +29,7 @@ const ExperienceItemB = ({ id, item }) => {
                     <Date
                         startDate={item.startDate}
                         endDate={item.endDate}
+                        hideStartDate={item.hideStartDate}
                         updateStartDate={(newDate) => ({ entity: 'exp', action: 'updateExpStartDate', payload: { id, newDate } })}
                         updateEndDate={(newDate) => ({ entity: 'exp', action: 'updateExpEndDate', payload: { id, newDate } })}
                     />

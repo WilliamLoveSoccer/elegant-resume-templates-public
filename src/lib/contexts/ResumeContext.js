@@ -3,6 +3,7 @@ import React, { createContext, memo, useCallback, useContext } from 'react';
 const ResumeContext = createContext({});
 
 const ResumeProvider = ({ children, resumeData, onUpdate, config }) => {
+    
     const dispatch = useCallback(({ entity, action, payload }) => {
         const { noUpdate } = config;
         if (noUpdate) return;

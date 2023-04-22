@@ -3,25 +3,42 @@ import { useTranslation } from 'react-i18next';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { monthOptions } from '../../../data/timeOptions';
 import { useStoreDispatch } from '../../../hooks/useStoreDispatch';
+import { useMetadateState } from '../../../hooks/useStoreState';
 
 const DatePicker = ({ date, actionCreator }) => {
     const [showModal, setShowModal] = useState(false);
 
     const [year, setYear] = useState(2021);
-    const [month, setMonth] = useState();
+    const [month, setMonth] = useState(null);
     const containerRef = useRef();
     const stateRef = useRef(showModal);
     const dispatch = useStoreDispatch();
     const didupdateRef = useRef(false);
     const { t, i18n } = useTranslation();
+    const { dateFormat } = useMetadateState();
 
     useEffect(() => {
         if (didupdateRef.current === true) {
-            dispatch(actionCreator(`${year}.${month}`));
+            if (month !== null) {
+                switch (dateFormat) {
+                    case 1: {
+                        dispatch(actionCreator(`${year}.${month}`));
+                        return;
+                    }
+                    case 3: {
+                        dispatch(actionCreator(`${year}/${month}`));
+                        return;
+                    }
+                    case 2: {
+                        dispatch(actionCreator(`${month}/${year}`));
+                        return;
+                    }
+                }
+            }
         } else {
             didupdateRef.current = true;
         }
-    }, [year, month]);
+    }, [month, dateFormat]);
 
     const handleClick = () => {
         const showModal = stateRef.current;
@@ -42,17 +59,31 @@ const DatePicker = ({ date, actionCreator }) => {
     const handleYearIncDec = (flag) => {
         const newYear = year + flag;
         if (month === undefined) {
-            setMonth('01');
+            const monthLable = getMonthLabel(1);
+            setMonth(monthLable);
         }
         setYear(newYear);
     };
 
-    const handleMonthChange = (month) => {
-        // console.log(`month`, month);
+    const onMonthClicked = (month) => {
         setShowModal(false);
         document.removeEventListener('click', handleOutsideClick);
-        dispatch(actionCreator(`${year}.${month}`));
-        setMonth(month);
+        const monthLabel = getMonthLabel(month);
+        setMonth(monthLabel);
+    };
+
+    const getMonthLabel = (monthOption) => {
+        switch (dateFormat) {
+            case 1: {
+                return monthOption.digitalLabel;
+            }
+            case 2: {
+                return monthOption.digitalLabel;
+            }
+            case 3: {
+                return monthOption.digitalLabel;
+            }
+        }
     };
 
     const handleClickPresent = () => {
@@ -97,7 +128,7 @@ const DatePicker = ({ date, actionCreator }) => {
                                 <div
                                     className="er-py-2 er-cursor-pointer er-whitespace-nowrap er-text-center"
                                     key={month.id}
-                                    onClick={() => handleMonthChange(month.label)}
+                                    onClick={() => onMonthClicked(month)}
                                 >
                                     {month[i18n.language]}
                                 </div>

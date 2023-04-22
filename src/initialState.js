@@ -118,6 +118,7 @@ const initState = {
             background: '#FFFFFF',
         },
         showGrammarly: false,
+        dateFormat: 2
     },
     project: {
         id: 'project',
@@ -376,6 +377,7 @@ const initStateZh = {
             text: '#000000',
             background: '#FFFFFF',
         },
+        dateFormat: 1
     },
     userSettings: {
         id: 'userSettings',
